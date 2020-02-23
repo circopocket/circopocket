@@ -1,5 +1,5 @@
 <div align="right">
-    <img height='20px' src='https://raw.githubusercontent.com/decowallet/branding/master/logos/decowallet-long.png'/>
+    <img height='20px' src='https://raw.githubusercontent.com/decowallet/branding/master/logos/logo-long.png'/>
 </div>
 
 # Decowallet [![Build Status](https://travis-ci.com/amazingandyyy/decowallet.svg?token=C7NJ8bT8vb8dmq7fMDsa&branch=master)](https://travis-ci.com/amazingandyyy/decowallet)
@@ -143,5 +143,5 @@ Review, Explore, Earn
 All rights reserved.
 
 <div align="center">
-    <img height='20px' src='https://raw.githubusercontent.com/decowallet/branding/master/logos/decowallet-r-144.png'/>
+    <img height='20px' src='https://raw.githubusercontent.com/decowallet/branding/master/logos/decowallet-r-800.png'/>
 </div>
