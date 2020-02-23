@@ -1,7 +1,7 @@
 {
-  "name": "decowallet",
+  "name": "circopocket",
   "version": "2.1.46",
-  "description": "www.decowallet.com and server.decowallet.com",
+  "description": "www.circopocket.com and server.circopocket.com",
   "main": "server/build/server.js",
   "engines": {
     "node": "8.9.4"
@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/amazingandyyy/decowallet.git"
+    "url": "git+https://github.com/amazingandyyy/circopocket.git"
   },
   "keywords": [
     "marketing",
@@ -37,9 +37,9 @@
   "author": "Amazingandyyy <amazingandyyy@gmail.com> (Andy Chen)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/amazingandyyy/decowallet/issues"
+    "url": "https://github.com/amazingandyyy/circopocket/issues"
   },
-  "homepage": "https://github.com/amazingandyyy/decowallet#readme",
+  "homepage": "https://github.com/amazingandyyy/circopocket#readme",
   "devDependencies": {},
   "dependencies": {
     "eslint": "^4.14.0",

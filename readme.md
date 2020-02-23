@@ -1,12 +1,12 @@
 <div align="right">
-    <img height='20px' src='https://raw.githubusercontent.com/decowallet/branding/master/logos/logo-long.png'/>
+    <img height='20px' src='https://raw.githubusercontent.com/circopocket/branding/master/logos/logo-long.png'/>
 </div>
 
-# Decowallet [![Build Status](https://travis-ci.com/amazingandyyy/decowallet.svg?token=C7NJ8bT8vb8dmq7fMDsa&branch=master)](https://travis-ci.com/amazingandyyy/decowallet)
+# Circopocket [![Build Status](https://travis-ci.com/amazingandyyy/circopocket.svg?token=C7NJ8bT8vb8dmq7fMDsa&branch=master)](https://travis-ci.com/amazingandyyy/circopocket)
 
-decowallet.com Official Resource for Website and Server
+circopocket.com Official Resource for Website and Server
 
-## What is Decowallet
+## What is Circopocket
 
 Review, Explore, Earn
 
@@ -77,24 +77,24 @@ Review, Explore, Earn
   - [ ] style definition
 - [x] email
   - [x] host by namecheap, served by cloudfare
-  - [x] team@decowallet.com
+  - [x] team@circopocket.com
   - [ ] email signature
   - [ ] email template
 - [ ] server
-  - [x] server(`https://server.decowallet.com`)
-  - [x] webhook(`https://server.decowallet.com/webhook`)
-  - [ ] docs(`https://server.decowallet.com/docs`)
+  - [x] server(`https://server.circopocket.com`)
+  - [x] webhook(`https://server.circopocket.com/webhook`)
+  - [ ] docs(`https://server.circopocket.com/docs`)
   - [ ] server 404 handler
 - [x] client app
-  - [x] website(`https://www.decowallet.com`)
-  - [x] website(`https://decowallet.com`)
+  - [x] website(`https://www.circopocket.com`)
+  - [x] website(`https://circopocket.com`)
   - [x] 404 handler _> redirect to `/#`, handled by ReactRouter
 - [ ] company social account
-  - [x] [github](https://github.com/decowallet)
+  - [x] [github](https://github.com/circopocket)
   - [x] [twitter](https://twitter.com/revieweer_team)
-  - [x] [facebook](https://facebook.com/decowallet)
-  - [x] [medium](https://medium.com/decowallet)
-  - [x] [linkedin](https://www.linkedin.com/company/decowallet/)
+  - [x] [facebook](https://facebook.com/circopocket)
+  - [x] [medium](https://medium.com/circopocket)
+  - [x] [linkedin](https://www.linkedin.com/company/circopocket/)
   - [ ] Wechat Official Account
 - internal
   - [ ] comunication app
@@ -108,19 +108,19 @@ Review, Explore, Earn
 ## Production DevOps/Setups
 
 - [x] Automatic CI
-  - [x] [travis-ci](https://travis-ci.com/amazingandyyy/decowallet)
+  - [x] [travis-ci](https://travis-ci.com/amazingandyyy/circopocket)
 - [ ] Testing
   - [ ] Unit Testing
     - [ ] Node endpoints
     - [ ] React Snapshot
   - [x] Linter checking
 - [x] Internet Security
-  - [x] [https](https://www.cloudflare.com/a/overview/decowallet.com)
+  - [x] [https](https://www.cloudflare.com/a/overview/circopocket.com)
   - [ ] DDos Protection
 - [x] Monitoring
-  - [x] [Sentry](https://sentry.io/decowallet/)
-    - [node](https://sentry.io/decowallet/express/)
-    - [reac](https://sentry.io/decowallet/react-0v/)
+  - [x] [Sentry](https://sentry.io/circopocket/)
+    - [node](https://sentry.io/circopocket/express/)
+    - [reac](https://sentry.io/circopocket/react-0v/)
   - [ ] New Relic
 - [x] Traffic Analytics
   - [x] [Google Analytics](https://analytics.google.com/analytics/web/#realtime/rt-overview/a97391318w170557385p170363690/)
@@ -143,5 +143,10 @@ Review, Explore, Earn
 All rights reserved.
 
 <div align="center">
-    <img height='20px' src='https://raw.githubusercontent.com/decowallet/branding/master/logos/decowallet-r-800.png'/>
+    <img height='20px' src='https://raw.githubusercontent.com/circopocket/branding/master/logos/circopocket-r-800.png'/>
 </div>
+
+- circlepocket
+- cirpocket
+- rectpocket
+- coopocket

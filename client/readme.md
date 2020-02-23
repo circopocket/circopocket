@@ -1,12 +1,12 @@
 <div align="right">
-    <img height='20px' src='https://raw.githubusercontent.com/decowallet/branding/master/logos/decowallet-long.png'/>
+    <img height='20px' src='https://raw.githubusercontent.com/circopocket/branding/master/logos/circopocket-long.png'/>
 </div>
 
-# Decowallet [![Build Status](https://travis-ci.com/amazingandyyy/decowallet.svg?token=C7NJ8bT8vb8dmq7fMDsa&branch=master)](https://travis-ci.com/amazingandyyy/decowallet)
+# Circopocket [![Build Status](https://travis-ci.com/amazingandyyy/circopocket.svg?token=C7NJ8bT8vb8dmq7fMDsa&branch=master)](https://travis-ci.com/amazingandyyy/circopocket)
 
-decowallet.com gh-pages hosting
+circopocket.com gh-pages hosting
 
-## What is Decowallet
+## What is Circopocket
 
 Smart idea of your monthly spending.
 
@@ -20,5 +20,5 @@ Smart idea of your monthly spending.
 All rights reserved.
 
 <div align="center">
-    <img height='20px' src='https://raw.githubusercontent.com/decowallet/branding/master/logos/decowallet-r-144.png'/>
+    <img height='20px' src='https://raw.githubusercontent.com/circopocket/branding/master/logos/circopocket-r-144.png'/>
 </div>

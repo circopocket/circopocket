@@ -1,4 +1,4 @@
-.decowallet-loading-bar{
+.circopocket-loading-bar{
   background: linear-gradient(to right, $brand-color, lighten($brand-color, 10%));
   height: 2px;
   position: absolute;
@@ -13,7 +13,7 @@
       box-shadow: 0px -5px 20px rgba(darken($brand-color, 30%), 0.1);
   }
 }
-.decowallet-loading-bar-2{
+.circopocket-loading-bar-2{
   background: linear-gradient(to right, darken($brand-color, 5%), $brand-color);
   height: 1rem;
   border-radius: 5px;

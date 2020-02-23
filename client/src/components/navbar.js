@@ -19,7 +19,7 @@ class Navbar extends Component {
         this.setState({ pathname })
     }
     renderClass(base, router){
-        return (this.state.pathname.indexOf(router)!=-1)?`${base} decowallet-active`:base;
+        return (this.state.pathname.indexOf(router)!=-1)?`${base} circopocket-active`:base;
     }
     renderSignButton(){
         const {isLoggedIn, profile, isAdmin} = this.props;
@@ -57,7 +57,7 @@ class Navbar extends Component {
     render() {
         return (
             <nav className="navbar navbar-expand sticky-top navbar-light">
-                <LoadingBar className='decowallet-loading-bar' />
+                <LoadingBar className='circopocket-loading-bar' />
                 <NavLink className="navbar-brand" to="/">
                     <img src="../assets/svgs/logo-r.svg" height="20" className='d-sm-none'/>
                     <img src="../assets/svgs/logo-long.svg" height="20" className='d-none d-sm-block'/>

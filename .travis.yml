@@ -14,12 +14,12 @@ script:
 deploy:
   provider: pages
   local-dir: docs
-  repo: decowallet/decowallet.github.io
+  repo: circopocket/circopocket.github.io
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
   keep-history: true
   on:
     branch: master
   target-branch: master
-  name: Decowallet Travis Helper
-  email: team@decowallet.com
+  name: Circopocket Travis Helper
+  email: team@circopocket.com

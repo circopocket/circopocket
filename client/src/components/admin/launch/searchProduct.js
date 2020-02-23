@@ -88,7 +88,7 @@ class SearchProductForm extends React.Component {
         if(!this.productPendingId && !this.productId) {
             return (<div>
                 <SquareLoader/>
-                <LoadingBar scope="adminSearchProductBar" className='decowallet-loading-bar-2' style={{'margin': '20px auto'}}/>
+                <LoadingBar scope="adminSearchProductBar" className='circopocket-loading-bar-2' style={{'margin': '20px auto'}}/>
                 <h6>Fetching product details from amazon...</h6>
             </div>)
         }
