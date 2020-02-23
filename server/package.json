@@ -8,8 +8,6 @@
     "start": "NODE_ENV=production node build/server.js",
     "build": "rm -rf ./build && NPM_CONFIG_PRODUCTION=false babel -d ./build ./src -s"
   },
-  "author": "amazingandyyy",
-  "license": "MIT",
   "dependencies": {
     "aws-sdk": "^2.205.0",
     "axios": "^0.19.2",

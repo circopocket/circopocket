@@ -8,7 +8,7 @@ class Welcome extends React.Component {
       <div className='welcome'>
         <div className='content-container'>
           <div className='title'>
-            Smart idea of your monthly spending.
+            Improve your monthly spend!
           </div>
           <div className='subtitle'>
             Find peers to split spotify/mobile/insurance bills.

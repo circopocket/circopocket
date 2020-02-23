@@ -8,7 +8,7 @@ circopocket.com gh-pages hosting
 
 ## What is Circopocket
 
-Smart idea of your monthly spending.
+Improve your monthly spend.
 
 - Connect with your bank account
 - Analyze your pattern

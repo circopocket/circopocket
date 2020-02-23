@@ -26,22 +26,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/amazingandyyy/circopocket.git"
+    "url": "git+https://github.com/circopocket/circopocket.git"
   },
   "keywords": [
-    "marketing",
-    "seo",
-    "ecommerce",
-    "online shopping",
-    "review",
-    "referral"
+    "fintech"
   ],
-  "author": "Amazingandyyy <amazingandyyy@gmail.com> (Andy Chen)",
-  "license": "MIT",
+  "author": "Circo <team@circopocket.com> (Circo Pocket Team)",
   "bugs": {
-    "url": "https://github.com/amazingandyyy/circopocket/issues"
+    "url": "https://github.com/circopocket/circopocket/issues"
   },
-  "homepage": "https://github.com/amazingandyyy/circopocket#readme",
+  "homepage": "https://github.com/circopocket/circopocket#readme",
   "devDependencies": {},
   "dependencies": {
     "eslint": "^4.14.0",
