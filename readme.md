@@ -145,8 +145,3 @@ All rights reserved.
 <div align="center">
     <img height='20px' src='https://raw.githubusercontent.com/circopocket/branding/master/logos/circopocket-r-800.png'/>
 </div>
-
-- circlepocket
-- cirpocket
-- rectpocket
-- coopocket
