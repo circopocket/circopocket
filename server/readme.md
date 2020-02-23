@@ -1,26 +1,26 @@
-# Revieweer RESTful API v1 documentation
+# Decowallet RESTful API v1 documentation
 
 ## BaseURI
 
-- [base url][base url]:   `https://server.revieweer.com`
-- [webhook][webhook]:     `https://server.revieweer.com/webhook`
-- [open api][open api]:   `https://server.revieweer.com/openapi`
-- [auth api][auth api]:   `https://server.revieweer.com/api`
+- [base url][base url]:   `https://server.decowallet.com`
+- [webhook][webhook]:     `https://server.decowallet.com/webhook`
+- [open api][open api]:   `https://server.decowallet.com/openapi`
+- [auth api][auth api]:   `https://server.decowallet.com/api`
 
 notes: The first three route are publicly available.
 
-[base url]: https://server.revieweer.com/
-[webhook]: https://server.revieweer.com/webhook/
-[open api]: https://server.revieweer.com/openapi/
-[auth api]: https://server.revieweer.com/api/
+[base url]: https://server.decowallet.com/
+[webhook]: https://server.decowallet.com/webhook/
+[open api]: https://server.decowallet.com/openapi/
+[auth api]: https://server.decowallet.com/api/
 
 ## API Usage & Response
 
 to use `/api` route, complete the following stpes:
 
-- Login [revieweer](https://revieweer.com/#signin) to signup
+- Login [decowallet](https://decowallet.com/#signin) to signup
 - A `auth_jwt_token` will be generated and stored in your browser localStorage
-- This token will expired in 7 days, to request an extended token, [contact]((team@revieweer.com)) us
+- This token will expired in 7 days, to request an extended token, [contact]((team@decowallet.com)) us
 - Every API endpoint requires an `Authentication` header
 
 Example:
@@ -33,7 +33,7 @@ request.headers['Authorization'] = `token`
 
 #### Account
 
-- GET `https://server.revieweer.com/api`
+- GET `https://server.decowallet.com/api`
   - good response
   ```json
   {"message": "/api connected"}
@@ -42,30 +42,30 @@ request.headers['Authorization'] = `token`
   ```json
   "Please make sure your request has an Authorization header."
   ```
-- GET `https://server.revieweer.com/api/user/profile`
-- POST `https://server.revieweer.com/api/user/profile`
+- GET `https://server.decowallet.com/api/user/profile`
+- POST `https://server.decowallet.com/api/user/profile`
 
 #### Product
 
-- POST `https://server.revieweer.com/api/product/createFromAmazon?source=XXX`
+- POST `https://server.decowallet.com/api/product/createFromAmazon?source=XXX`
   - request sample:
   ```terminal
-  POST https://server.revieweer.com/api/product/createFromAmazon?source=https://www.amazon.com/gp/product/B005FEGYJC
+  POST https://server.decowallet.com/api/product/createFromAmazon?source=https://www.amazon.com/gp/product/B005FEGYJC
   ```
   - good response:
   ```json
   "5a87d194d2b4c919cb364a9c"
   ```
-- GET `https://server.revieweer.com/api/product`
+- GET `https://server.decowallet.com/api/product`
   - good response:
   ```json
   { "message": "/api/product connected" }
   ```
-- GET `https://server.revieweer.com/api/product/getOneFromAmazon`
-- GET `https://server.revieweer.com/api/getOneFromRevieweer?productId=XXX`
+- GET `https://server.decowallet.com/api/product/getOneFromAmazon`
+- GET `https://server.decowallet.com/api/getOneFromRevieweer?productId=XXX`
   - request sample:
   ```terminal
-  GET https://server.revieweer.com/api/getOneFromRevieweer?productId=5a87d194d2b4c919cb364a9c
+  GET https://server.decowallet.com/api/getOneFromRevieweer?productId=5a87d194d2b4c919cb364a9c
   ```
   - good response:
   ```json
@@ -85,7 +85,7 @@ request.headers['Authorization'] = `token`
       "__v": 0
     }
   ```
-- GET `https://server.revieweer.com/api/admin`
+- GET `https://server.decowallet.com/api/admin`
   - good response:
   ```json
   {"message": "/api/admin connected"}

@@ -32,20 +32,20 @@ class Feature extends React.Component {
 
 const featuresList = [{
   icon: 'customer-1.svg',
-  title: 'Explore New Products Everyday',
-  description: 'At least one new product is featured on Revieweer everyday.'
+  title: 'Analyze your transactions',
+  description: 'Analyze bank transactions in a secure and reliable way.'
 },{
   icon: 'customer-2.svg',
-  title: 'Get The Surprise From Amazon',
-  description: 'Order the product on e-commerse sites such as Amazon.'
+  title: 'Get Smart Ideas',
+  description: 'Get ideas of what to unsubscribe and cancel.'
 },{
   icon: 'customer-3.svg',
-  title: 'Receive Package And Review Online',
-  description: 'Take an honest review and put photos online.'
+  title: 'Find peers',
+  description: 'Find peers without reveal identity.'
 },{
   icon: 'customer-4.svg',
-  title: 'Get Up To 100% cashback + Bonus',
-  description: 'Get up to 100% cashback and bonus for signups before August.'
+  title: 'Save 40% on utility bills.',
+  description: 'Reduce 40% on Spotify/Mobile/Insurance bills.'
 },]
 
 export default Feature;

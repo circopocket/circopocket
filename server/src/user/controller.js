@@ -19,12 +19,13 @@ export default {
       const deepLink = `${origin}/#signupVerification?token=${tokenn}&address=${email}`;
       const mailObj = {
         to: email,
-        subject: '[Revieweer]Welcome and Account Activation.',
+        subject: '[Decowallet]Welcome and Account Activation.',
         message: (config.version=='public' || config.version=='internal')?activationEmailTemplate(deepLink):accessRequestEmailTemplate(deepLink)
       };
       Email.send(mailObj).then(email=>{
         res.send({email});
       }).catch((err)=>{
+        console.log(err);
         next('500:Email is bad.')
       });
     }).catch(next);
@@ -123,13 +124,13 @@ export default {
     });
     const s3 = new AWS.S3();
     s3.putObject({
-      Bucket: 'revieweer',
+      Bucket: 'decowallet',
       Key: uuidKey, 
       Body: file.buffer,
       ACL: 'public-read'
     }, (err, result) => {
       if (err) return next('500:Uploading Photo Failed');
-      const avatarURL = `https://s3-us-west-1.amazonaws.com/revieweer/${uuidKey}`
+      const avatarURL = `https://s3-us-west-1.amazonaws.com/decowallet/${uuidKey}`
       User.findByIdAndUpdate(userId, { $set:{avatar: avatarURL} }, { new: true })
       .then(_ => res.sendStatus(200))
       .catch(next)
@@ -138,21 +139,21 @@ export default {
 }
 
 const accessRequestEmailTemplate = (deepLink) => {
-  return `<b>Welcome to Revieweer</b>
+  return `<b>Welcome to Decowallet</b>
   <br/>
   You are in line to Beta Access!
   <br/>
-  Please feel free to reply this email or reach out to us via team@revieweer.com anytime.
+  Please feel free to reply this email or reach out to us via team@decowallet.com anytime.
   <br/>
   <br/>
   Regards,
   <br/>
-  <b>The Revieweer team</b>
+  <b>The Decowallet team</b>
   `
 }
 
 const activationEmailTemplate = (deepLink) => {
-  return `<b>Welcome to Revieweer,</b>
+  return `<b>Welcome to Decowallet,</b>
   <br/>
   <br/>
   If you requested this activation, please go to the following URL to confirm this email and continue to use this email address as your account username,
@@ -163,7 +164,7 @@ const activationEmailTemplate = (deepLink) => {
   <br/> 
   <p>--------------</p>
   <br/> 
-  Enjoy the benefits of being a revieweer:
+  Enjoy the benefits of being a decowallet:
   <br/>
   <ul>
     <li><b>Explore:</b> explore new products to try.</li>
@@ -173,12 +174,12 @@ const activationEmailTemplate = (deepLink) => {
   <br/>
   We are looking forward to <b>your experience</b>. 
   <br/>
-  Please feel free to reply this email or reach out to us via team@revieweer.com anytime.
+  Please feel free to reply this email or reach out to us via team@decowallet.com anytime.
   <br/>
   <br/>
   <br/>
   Regards,
   <br/>
-  <b>The Revieweer team</b>
+  <b>The Decowallet team</b>
   `
 }

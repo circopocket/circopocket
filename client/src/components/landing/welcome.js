@@ -8,11 +8,10 @@ class Welcome extends React.Component {
       <div className='welcome'>
         <div className='content-container'>
           <div className='title'>
-            Review, Explore, Earn
+            Smart idea of your monthly spending.
           </div>
           <div className='subtitle'>
-            Review New Products and Get 100% Cashback + Bonus
-            {/* We find you business owners that are willing to pay you up to 100% cashback + rewards if you review new products. */}
+            Find peers to split spotify/mobile/insurance bills.
           </div>
           <div  className='button-container'>
             {this.renderButton()}
@@ -26,7 +25,7 @@ class Welcome extends React.Component {
         <Link className='btn btn-success btn-block btn-lg try-it-out' to='signup'>Try It Now</Link>
       </div>)
     :(<div>
-        <Link className='btn btn-success btn-block btn-lg' to='explore'>Explore Now</Link>
+        <Link className='btn btn-success btn-block btn-lg' to='connect'>Connect Now</Link>
       </div>)
   }
 }

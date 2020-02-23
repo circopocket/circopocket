@@ -1,18 +1,18 @@
 <div align="right">
-    <img height='20px' src='https://raw.githubusercontent.com/revieweer/branding/master/logos/revieweer-long.png'/>
+    <img height='20px' src='https://raw.githubusercontent.com/decowallet/branding/master/logos/decowallet-long.png'/>
 </div>
 
-# Revieweer [![Build Status](https://travis-ci.com/amazingandyyy/revieweer.svg?token=C7NJ8bT8vb8dmq7fMDsa&branch=master)](https://travis-ci.com/amazingandyyy/revieweer)
+# Decowallet [![Build Status](https://travis-ci.com/amazingandyyy/decowallet.svg?token=C7NJ8bT8vb8dmq7fMDsa&branch=master)](https://travis-ci.com/amazingandyyy/decowallet)
 
-revieweer.com gh-pages hosting
+decowallet.com gh-pages hosting
 
-## What is Revieweer
+## What is Decowallet
 
-Review, Explore, Earn
+Smart idea of your monthly spending.
 
-- Order, unpackage and review
-- Explore more new products
-- Earn more cashback + bonus
+- Connect with your bank account
+- Analyze your pattern
+- Reduce fee and spending
 
 
 ## License/Copy Rights
@@ -20,5 +20,5 @@ Review, Explore, Earn
 All rights reserved.
 
 <div align="center">
-    <img height='20px' src='https://raw.githubusercontent.com/revieweer/branding/master/logos/revieweer-r-144.png'/>
+    <img height='20px' src='https://raw.githubusercontent.com/decowallet/branding/master/logos/decowallet-r-144.png'/>
 </div>

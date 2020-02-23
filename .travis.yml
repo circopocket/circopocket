@@ -14,12 +14,12 @@ script:
 deploy:
   provider: pages
   local-dir: docs
-  repo: revieweer/revieweer.github.io
+  repo: amazingandyyy/decowallet.com
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
   keep-history: true
   on:
     branch: master
   target-branch: master
-  name: Revieweer Travis Helper
-  email: team@revieweer.com
+  name: Decowallet Travis Helper
+  email: team@decowallet.com

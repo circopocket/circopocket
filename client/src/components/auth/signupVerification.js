@@ -40,8 +40,8 @@ class SignupVerification extends Component {
     handleFormSubmit(data) {
         const {token, address, avatarChosen} = this.state;
         const avatarchoices = [
-            'https://s3-us-west-1.amazonaws.com/revieweer/users/mascot/mascot-m.jpg',
-            'https://s3-us-west-1.amazonaws.com/revieweer/users/mascot/mascot-w.jpg'
+            'https://s3-us-west-1.amazonaws.com/decowallet/users/mascot/mascot-m.jpg',
+            'https://s3-us-west-1.amazonaws.com/decowallet/users/mascot/mascot-w.jpg'
         ]
         data.email = address;
         data.avatar = avatarchoices[avatarChosen];
@@ -153,7 +153,7 @@ class SignupVerification extends Component {
                         </div>
                     </div>
                     <div style={{'padding': '15px 0px'}}>
-                        <button type='submit' className='btn btn-lg btn-success btn-block'>Join Revieweer!</button>
+                        <button type='submit' className='btn btn-lg btn-success btn-block'>Join Decowallet!</button>
                     </div>
                     {authUserError && <div className='alert alert-warning'>
                         {authUserError}

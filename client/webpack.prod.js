@@ -9,7 +9,7 @@ module.exports = merge(common, {
         new webpack.DefinePlugin({
             'process.env': {
                 'NODE_ENV': JSON.stringify('production'),
-                'SERVERURI': JSON.stringify('https://server.revieweer.com')
+                'SERVERURI': JSON.stringify('https://server.decowallet.com')
             }
         }),
         new NoConsolePlugin({

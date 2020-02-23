@@ -4,7 +4,7 @@ import api from './api';
 import apify from './apify/router';
 
 const router = require('express').Router();
-router.get('/', (req, res)=>res.send({message: 'connect to server.revieweer.com', webhook: 'https://server.revieweer.com/webhook', openapi:'https://server.revieweer.com/openapi', api: 'https://server.revieweer.com/api'}));
+router.get('/', (req, res)=>res.send({message: 'connect to server.decowallet.com', webhook: 'https://server.decowallet.com/webhook', openapi:'https://server.decowallet.com/openapi', api: 'https://server.decowallet.com/api'}));
 router.get('/webhook', (req, res)=>res.send({connection: true,timestamp: new Date().toUTCString()}));
 
 router.post('/signupWithEmail', User.signupWithEmail);

@@ -3,7 +3,7 @@ import config from '../config';
 
 const AWS_KEY= config.aws.accessKeyId;
 const AWS_SECRET=config.aws.secretKey;
-const AWS_SES_SENDER='team@revieweer.com';
+const AWS_SES_SENDER='team@decowallet.com';
 
 var SESserver = ses.createClient({
   key: AWS_KEY,
@@ -44,11 +44,11 @@ export default Email;
 
 // const mailObj = {
 //   to: 'amazingandyyy@gmail.com',
-//   subject: '[Revieweer]Welcome and Account Activation.',
-//   message: `<b>Welcome to join Revieweer,</b> <br/><br/><br/>
+//   subject: '[Decowallet]Welcome and Account Activation.',
+//   message: `<b>Welcome to join Decowallet,</b> <br/><br/><br/>
 //   Please click <a href='${'deepLink'}' target='_blank'>here</a> to your activate your account.
 //   <br/>
-//   Enjoy of being a revieweer:
+//   Enjoy of being a decowallet:
 //   <br/>
 //   <ul>
 //     <li>Explore: explore new products to try.</li>
@@ -56,7 +56,7 @@ export default Email;
 //     <li>Earn: we pay you up to 100% cashback + cash rewards</li>
 //   </ul>
 //   <br/>
-//   The best, Revieweer Team.`
+//   The best, Decowallet Team.`
 // };
 // SES.send(mailObj).then(email=>{
 //   console.log(email)

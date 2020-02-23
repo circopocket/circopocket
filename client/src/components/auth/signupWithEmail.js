@@ -8,7 +8,7 @@ import { RecaptchaComponent,CenterCard121 } from '../utils';
 import { signupWithEmail, signupWithEmailReset } from '../../actions';
 
 let INITIAL_STATE = {
-    recaptchaGood: false,
+    recaptchaGood: true,
     errorMsg: null
 }
 
@@ -98,9 +98,9 @@ class SignupWithEmail extends React.Component {
                 </div>
                 {this.renderAlert()}
                 <div>
-                    <div style={{'margin': '20px auto'}}>
+                    {/* <div style={{'margin': '20px auto'}}>
                         {dirty&&<RecaptchaComponent verify={this.recaptchaVerifyCallback.bind(this)} />}
-                    </div>
+                    </div> */}
                     <button type='submit' disabled={submitting} className='btn btn-lg btn-success btn-block'>Send Me Activation</button>
                 </div>
                 <div style={{'paddingTop': '20px'}}>

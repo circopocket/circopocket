@@ -1,12 +1,12 @@
 <div align="right">
-    <img height='20px' src='https://raw.githubusercontent.com/revieweer/branding/master/logos/revieweer-long.png'/>
+    <img height='20px' src='https://raw.githubusercontent.com/decowallet/branding/master/logos/decowallet-long.png'/>
 </div>
 
-# Revieweer [![Build Status](https://travis-ci.com/amazingandyyy/revieweer.svg?token=C7NJ8bT8vb8dmq7fMDsa&branch=master)](https://travis-ci.com/amazingandyyy/revieweer)
+# Decowallet [![Build Status](https://travis-ci.com/amazingandyyy/decowallet.svg?token=C7NJ8bT8vb8dmq7fMDsa&branch=master)](https://travis-ci.com/amazingandyyy/decowallet)
 
-revieweer.com Official Resource for Website and Server
+decowallet.com Official Resource for Website and Server
 
-## What is Revieweer
+## What is Decowallet
 
 Review, Explore, Earn
 
@@ -77,24 +77,24 @@ Review, Explore, Earn
   - [ ] style definition
 - [x] email
   - [x] host by namecheap, served by cloudfare
-  - [x] team@revieweer.com
+  - [x] team@decowallet.com
   - [ ] email signature
   - [ ] email template
 - [ ] server
-  - [x] server(`https://server.revieweer.com`)
-  - [x] webhook(`https://server.revieweer.com/webhook`)
-  - [ ] docs(`https://server.revieweer.com/docs`)
+  - [x] server(`https://server.decowallet.com`)
+  - [x] webhook(`https://server.decowallet.com/webhook`)
+  - [ ] docs(`https://server.decowallet.com/docs`)
   - [ ] server 404 handler
 - [x] client app
-  - [x] website(`https://www.revieweer.com`)
-  - [x] website(`https://revieweer.com`)
+  - [x] website(`https://www.decowallet.com`)
+  - [x] website(`https://decowallet.com`)
   - [x] 404 handler _> redirect to `/#`, handled by ReactRouter
 - [ ] company social account
-  - [x] [github](https://github.com/revieweer)
+  - [x] [github](https://github.com/decowallet)
   - [x] [twitter](https://twitter.com/revieweer_team)
-  - [x] [facebook](https://facebook.com/revieweer)
-  - [x] [medium](https://medium.com/revieweer)
-  - [x] [linkedin](https://www.linkedin.com/company/revieweer/)
+  - [x] [facebook](https://facebook.com/decowallet)
+  - [x] [medium](https://medium.com/decowallet)
+  - [x] [linkedin](https://www.linkedin.com/company/decowallet/)
   - [ ] Wechat Official Account
 - internal
   - [ ] comunication app
@@ -108,19 +108,19 @@ Review, Explore, Earn
 ## Production DevOps/Setups
 
 - [x] Automatic CI
-  - [x] [travis-ci](https://travis-ci.com/amazingandyyy/revieweer)
+  - [x] [travis-ci](https://travis-ci.com/amazingandyyy/decowallet)
 - [ ] Testing
   - [ ] Unit Testing
     - [ ] Node endpoints
     - [ ] React Snapshot
   - [x] Linter checking
 - [x] Internet Security
-  - [x] [https](https://www.cloudflare.com/a/overview/revieweer.com)
+  - [x] [https](https://www.cloudflare.com/a/overview/decowallet.com)
   - [ ] DDos Protection
 - [x] Monitoring
-  - [x] [Sentry](https://sentry.io/revieweer/)
-    - [node](https://sentry.io/revieweer/express/)
-    - [reac](https://sentry.io/revieweer/react-0v/)
+  - [x] [Sentry](https://sentry.io/decowallet/)
+    - [node](https://sentry.io/decowallet/express/)
+    - [reac](https://sentry.io/decowallet/react-0v/)
   - [ ] New Relic
 - [x] Traffic Analytics
   - [x] [Google Analytics](https://analytics.google.com/analytics/web/#realtime/rt-overview/a97391318w170557385p170363690/)
@@ -143,5 +143,5 @@ Review, Explore, Earn
 All rights reserved.
 
 <div align="center">
-    <img height='20px' src='https://raw.githubusercontent.com/revieweer/branding/master/logos/revieweer-r-144.png'/>
+    <img height='20px' src='https://raw.githubusercontent.com/decowallet/branding/master/logos/decowallet-r-144.png'/>
 </div>

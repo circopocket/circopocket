@@ -71,13 +71,13 @@ const data = [{
   module: 'Social',
   list:[{
     title: 'Facebook',
-    outer_link: 'https://facebook.com/revieweer'
+    outer_link: 'https://facebook.com/decowallet'
   },{
     title: 'Medium Blog',
-    outer_link: 'https://medium.com/revieweer'
+    outer_link: 'https://medium.com/decowallet'
   },{
     title: 'Github',
-    outer_link: 'https://github.com/revieweer'
+    outer_link: 'https://github.com/decowallet'
   },{
     title: 'Twitter',
     outer_link: 'https://twitter.com/revieweer_team'

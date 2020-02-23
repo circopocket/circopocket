@@ -16,7 +16,7 @@ class ReviewInsight extends Component {
 	}
 	componentDidMount(){
 		this.props.fetchInsightReviews();
-		QRCode.toDataURL('https://www.revieweer.com')
+		QRCode.toDataURL('https://www.decowallet.com')
 			.then(url => {
 				this.setState({qrcode: url})
 			})

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 
 import { fetchOneReview } from '../../actions';
-import ProductPreview from '../explore/product.preview';
+import ProductPreview from '../connect/product.preview';
 import Visited from './visited';
 import Ordered from './ordered';
 

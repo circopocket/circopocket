@@ -19,7 +19,7 @@ class Navbar extends Component {
         this.setState({ pathname })
     }
     renderClass(base, router){
-        return (this.state.pathname.indexOf(router)!=-1)?`${base} revieweer-active`:base;
+        return (this.state.pathname.indexOf(router)!=-1)?`${base} decowallet-active`:base;
     }
     renderSignButton(){
         const {isLoggedIn, profile, isAdmin} = this.props;
@@ -57,7 +57,7 @@ class Navbar extends Component {
     render() {
         return (
             <nav className="navbar navbar-expand sticky-top navbar-light">
-                <LoadingBar className='revieweer-loading-bar' />
+                <LoadingBar className='decowallet-loading-bar' />
                 <NavLink className="navbar-brand" to="/">
                     <img src="../assets/svgs/logo-r.svg" height="20" className='d-sm-none'/>
                     <img src="../assets/svgs/logo-long.svg" height="20" className='d-none d-sm-block'/>
@@ -65,7 +65,7 @@ class Navbar extends Component {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item">
-                            <NavLink className={this.renderClass('nav-link', 'explore')} to="/explore">Explore</NavLink>
+                            <NavLink className={this.renderClass('nav-link', 'connect')} to="/connect">Connect</NavLink>
                         </li>
                         {this.props.isAdmin && <li className="nav-item">
                             <NavLink className={this.renderClass('nav-link', 'admin')} to="/admin/insight/products">Admin</NavLink>

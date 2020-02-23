@@ -53,7 +53,7 @@ nav.navbar {
           margin-left: 0.08rem;
           padding: 0.3rem 0.65rem;
       }
-      &:hover, &.hightlight, &.revieweer-active{
+      &:hover, &.hightlight, &.decowallet-active{
         transition: .2s ease;
           background: rgba(lighten($brand-color, 10%), 0.1);
           color: lighten($brand-color, 5%);

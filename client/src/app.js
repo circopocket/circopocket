@@ -8,9 +8,9 @@ import reduxMiddlewares from './redux/middlewares';
 
 import Layout from './components/layout';
 import Landing from './components/landing';
-import Explore from './components/explore/browser';
-import Product from './components/explore/product';
-import ProductEdit from './components/explore/product.edit';
+import Connect from './components/connect/browser';
+import Product from './components/connect/product';
+import ProductEdit from './components/connect/product.edit';
 import User from './components/user';
 import Signin from './components/auth/signin';
 import SignupWithEmail from './components/auth/signupWithEmail';
@@ -43,7 +43,7 @@ ReactDOM.render(
         <Layout>
           <Route exact path='/' component= {Landing} />
 
-          <Route path='/explore' component= {Explore} />
+          <Route path='/connect' component= {Connect} />
           
           <Route path='/pd/:productId' component= {Product} />
           <Route path='/edit/pd/:productId' component= {ProductEdit} />
