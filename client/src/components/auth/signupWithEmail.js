@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import { RecaptchaComponent,CenterCard121 } from '../utils';
+import { CenterCard121 } from '../utils';
 import { signupWithEmail, signupWithEmailReset } from '../../actions';
 
 let INITIAL_STATE = {
@@ -68,7 +68,7 @@ class SignupWithEmail extends React.Component {
         this.props.signupWithEmailReset();
     }
     renderForm(){
-        const {handleSubmit,emailStateError,emailSentTo, submitting,dirty} = this.props;
+        const { handleSubmit,emailStateError,emailSentTo, submitting } = this.props;
         const isBetaOnly = true;
         if(isBetaOnly && emailSentTo && emailSentTo.length > 1) {
             return (<div className='alert alert-success'>

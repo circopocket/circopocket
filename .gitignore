@@ -7,7 +7,7 @@ npm-debug.log
 build/
 .env
 .passport.js
-.DS_Store
+# .DS_Store
 
 note.txt
 .deprecated/

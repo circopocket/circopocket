@@ -14,7 +14,7 @@ script:
 deploy:
   provider: pages
   local-dir: docs
-  repo: decowallet/decowallet.com
+  repo: decowallet/decowallet.github.io
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
   keep-history: true
