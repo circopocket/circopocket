@@ -40,8 +40,8 @@ class SignupVerification extends Component {
     handleFormSubmit(data) {
         const {token, address, avatarChosen} = this.state;
         const avatarchoices = [
-            'https://s3-us-west-1.amazonaws.com/circopocket/users/mascot/mascot-m.jpg',
-            'https://s3-us-west-1.amazonaws.com/circopocket/users/mascot/mascot-w.jpg'
+            'https://circopocket.s3.amazonaws.com/users/mascot/mascot-m.jpg',
+            'https://circopocket.s3.amazonaws.com/users/mascot/mascot-w.jpg'
         ]
         data.email = address;
         data.avatar = avatarchoices[avatarChosen];

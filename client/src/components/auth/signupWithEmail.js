@@ -4,11 +4,10 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import { CenterCard121 } from '../utils';
+import { RecaptchaComponent, CenterCard121 } from '../utils';
 import { signupWithEmail, signupWithEmailReset } from '../../actions';
-
 let INITIAL_STATE = {
-    recaptchaGood: true,
+    recaptchaGood: process.env.NODE_ENV !== 'prod',
     errorMsg: null
 }
 
@@ -72,8 +71,8 @@ class SignupWithEmail extends React.Component {
         const isBetaOnly = true;
         if(isBetaOnly && emailSentTo && emailSentTo.length > 1) {
             return (<div className='alert alert-success'>
-                <h4 className='alert-heading'>You are in line!</h4>
-                Notification email will be sent to <b>{emailSentTo}</b> when {`it's`} publicly available.            
+                <h4 className='alert-heading'>Activiation Email sent!</h4>
+                    Activiation email will be sent to <b>{emailSentTo}</b>!
                 </div>)
         }else if(emailSentTo && emailSentTo.length > 1) {
             return(<div className='alert alert-success'>
@@ -98,9 +97,9 @@ class SignupWithEmail extends React.Component {
                 </div>
                 {this.renderAlert()}
                 <div>
-                    {/* <div style={{'margin': '20px auto'}}>
-                        {dirty&&<RecaptchaComponent verify={this.recaptchaVerifyCallback.bind(this)} />}
-                    </div> */}
+                    <div style={{'margin': '20px auto'}}>
+                        {window.grecaptcha ? <RecaptchaComponent verify={this.recaptchaVerifyCallback.bind(this)}/>:<div></div>}
+                    </div>
                     <button type='submit' disabled={submitting} className='btn btn-lg btn-success btn-block'>Send Me Activation</button>
                 </div>
                 <div style={{'paddingTop': '20px'}}>

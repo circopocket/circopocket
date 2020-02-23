@@ -1,9 +1,9 @@
 import ses from 'node-ses';
 import config from '../config';
 
-const AWS_KEY= config.aws.accessKeyId;
-const AWS_SECRET=config.aws.secretKey;
-const AWS_SES_SENDER='team@circopocket.com';
+const AWS_KEY= config.aws.ses.accessKeyId;
+const AWS_SECRET=config.aws.ses.secretKey;
+const AWS_SES_SENDER=config.aws.ses.senderEmailAddress;
 
 var SESserver = ses.createClient({
   key: AWS_KEY,

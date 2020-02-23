@@ -6,11 +6,11 @@ const resetRecaptcha = () => {
 };
 export class RecaptchaComponent extends Component {
   componentDidMount(){
-    console.log('Recaptcha componentDidMount')
+    // console.log('Recaptcha componentDidMount')
     resetRecaptcha();
   }
   componentWillUnmount(){
-    console.log('Recaptcha componentWillUnmount')
+    // console.log('Recaptcha componentWillUnmount')
     resetRecaptcha();
   }
   render() {
@@ -18,9 +18,10 @@ export class RecaptchaComponent extends Component {
       <div>
         <Recaptcha
             ref={e => recaptchaInstance = e}
-            sitekey="6LezYUcUAAAAAFI_dMXu8dmif5dyrf4KKpi0lfp9"
+            sitekey="6LcDa9sUAAAAAHiOoVeytebnrJnfWW7ffI50aClN"
             render="explicit"
             verifyCallback={this.props.verify}
+            onloadCallback={() => console.log('loaded')}
         />
       </div>
     );

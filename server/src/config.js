@@ -16,12 +16,19 @@ export default {
     list: ['amazingandyyy@gmail.com']
   },
   aws: {
-    accessKeyId: process.env.AWSAccessKeyId || '',
-    secretKey: process.env.AWSSecretKey || ''
+    ses: {
+      accessKeyId: process.env.SESAWSAccessKeyId || '',
+      secretKey: process.env.SESAWSSecretKey || '',
+      senderEmailAddress: 'team@circopocket.com'
+    },
+    s3: {
+      accessKeyId: process.env.S3AWSAccessKeyId || '',
+      secretKey: process.env.S3AWSSecretKey || ''
+    }
   },
   apifyToken: {
     itemLookUp: process.env.apifyToken_itemLookUp || ''
   },
-  version: process.env.version || 'closed',
+  version: process.env.APP_STAGE || 'closed',
   environment: process.env.NODE_ENV || 'development'
 }

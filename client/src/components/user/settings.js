@@ -130,18 +130,6 @@ class Settings extends React.Component {
           required
           />
       </div>
-      <div className="form-group">
-        <label>venmo ID:</label>
-        <Field
-          disabled={!editting}
-          type= 'string'
-          name="venmoId"
-          component="input"
-          className="form-control form-control-lg"
-          placeholder="your venmo ID"
-          required
-          />
-      </div>
       {dirty && <div className="form-group">
         <label>Password:</label>
         <Field

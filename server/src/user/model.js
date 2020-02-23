@@ -24,9 +24,6 @@ const userSchema = new mongoose.Schema({
           }
         }
     },
-    venmoId: {
-        type: String
-    },
     email: {
         type: String,
         unique: true,

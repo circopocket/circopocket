@@ -59,17 +59,14 @@ class Navbar extends Component {
             <nav className="navbar navbar-expand sticky-top navbar-light">
                 <LoadingBar className='circopocket-loading-bar' />
                 <NavLink className="navbar-brand" to="/">
-                    <img src="../assets/svgs/logo-r.svg" height="20" className='d-sm-none'/>
-                    <img src="../assets/svgs/logo-long.svg" height="20" className='d-none d-sm-block'/>
+                    <img src="../assets/svgs/logo-r.svg" height="30" className='d-sm-none'/>
+                    <img src="../assets/svgs/logo-long.svg" height="30" className='d-none d-sm-block'/>
                 </NavLink>
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item">
-                            <NavLink className={this.renderClass('nav-link', 'connect')} to="/connect">Connect</NavLink>
+                            <NavLink className={this.renderClass('nav-link', 'pocket')} to="/pocket">Pocket</NavLink>
                         </li>
-                        {this.props.isAdmin && <li className="nav-item">
-                            <NavLink className={this.renderClass('nav-link', 'admin')} to="/admin/insight/products">Admin</NavLink>
-                        </li>}
                     </ul>
                     <ul className="navbar-nav">
                         {this.renderSignButton()}

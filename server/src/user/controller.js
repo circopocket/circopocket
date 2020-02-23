@@ -113,8 +113,8 @@ export default {
       ext = '';
     }
 
-    const AWS_KEY_ID = config.aws.accessKeyId || process.env.AWSAccessKeyId;
-    const AWS_SECRET = config.aws.secretKey || process.env.AWSSecretKey;
+    const AWS_KEY_ID = config.aws.s3.accessKeyId;
+    const AWS_SECRET = config.aws.s3.secretKey;
 
     const uuidKey = `${config.environment}/users/${userId}/${fieldname}/${uuid()}${ext}`;
     AWS.config.update({
@@ -129,8 +129,9 @@ export default {
       Body: file.buffer,
       ACL: 'public-read'
     }, (err, result) => {
+      const avatarURL = `https://circopocket.s3.amazonaws.com/${uuidKey}`
+      console.log(err, avatarURL, AWS_KEY_ID, AWS_SECRET)
       if (err) return next('500:Uploading Photo Failed');
-      const avatarURL = `https://s3-us-west-1.amazonaws.com/circopocket/${uuidKey}`
       User.findByIdAndUpdate(userId, { $set:{avatar: avatarURL} }, { new: true })
       .then(_ => res.sendStatus(200))
       .catch(next)
@@ -156,23 +157,11 @@ const activationEmailTemplate = (deepLink) => {
   return `<b>Welcome to Circopocket,</b>
   <br/>
   <br/>
-  If you requested this activation, please go to the following URL to confirm this email and continue to use this email address as your account username,
+  If you requested this activation, please go to the following Link to verify this email,
   <br/>
   <br/>
   <a href='${deepLink}' target='_blank'>${deepLink}</a>
-  <br/> 
-  <br/> 
-  <p>--------------</p>
-  <br/> 
-  Enjoy the benefits of being a circopocket:
   <br/>
-  <ul>
-    <li><b>Explore:</b> explore new products to try.</li>
-    <li><b>Review:</b> amazing review with photo to help business grow</li>
-    <li><b>Earn:</b> we pay you up to 100% cashback + cash rewards</li>
-  </ul>
-  <br/>
-  We are looking forward to <b>your experience</b>. 
   <br/>
   Please feel free to reply this email or reach out to us via team@circopocket.com anytime.
   <br/>
@@ -180,6 +169,6 @@ const activationEmailTemplate = (deepLink) => {
   <br/>
   Regards,
   <br/>
-  <b>The Circopocket team</b>
+  <b>The Circo Pocket team</b>
   `
 }
