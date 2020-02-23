@@ -8,6 +8,7 @@ export class RecaptchaComponent extends Component {
   componentDidMount(){
     // console.log('Recaptcha componentDidMount')
     resetRecaptcha();
+    window.onloadCallback = () => console.log('Recaptcha loaded')
   }
   componentWillUnmount(){
     // console.log('Recaptcha componentWillUnmount')
@@ -21,7 +22,7 @@ export class RecaptchaComponent extends Component {
             sitekey="6LcDa9sUAAAAAHiOoVeytebnrJnfWW7ffI50aClN"
             render="explicit"
             verifyCallback={this.props.verify}
-            onloadCallback={() => console.log('loaded')}
+            onloadCallback={() => console.log('Recaptcha loaded')}
         />
       </div>
     );

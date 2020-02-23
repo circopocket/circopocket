@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import { RecaptchaComponent, CenterCard121 } from '../utils';
 import { signupWithEmail, signupWithEmailReset } from '../../actions';
 let INITIAL_STATE = {
-    recaptchaGood: process.env.NODE_ENV !== 'prod',
+    recaptchaGood: window.location.href.includes('localhost'),
     errorMsg: null
 }
 
@@ -50,16 +50,18 @@ class SignupWithEmail extends React.Component {
     }
     render() {
         return (
-            <CenterCard121>
-                <div className='card'>
-                <h4 className='card-header'>
-                    Join
-                </h4>
-                <div className='card-body'>
-                    {this.renderForm()}
-                </div>
-                </div>
-            </CenterCard121>
+            <div className='auth-component'>
+                <CenterCard121>
+                    <div className='card'>
+                    <h4 className='card-header'>
+                        Sign Up
+                    </h4>
+                    <div className='card-body'>
+                        {this.renderForm()}
+                    </div>
+                    </div>
+                </CenterCard121>
+            </div>
         );
     }
     resetStateAndProps(){
@@ -98,7 +100,7 @@ class SignupWithEmail extends React.Component {
                 {this.renderAlert()}
                 <div>
                     <div style={{'margin': '20px auto'}}>
-                        {window.grecaptcha ? <RecaptchaComponent verify={this.recaptchaVerifyCallback.bind(this)}/>:<div></div>}
+                        {!this.state.recaptchaGood ? <RecaptchaComponent verify={this.recaptchaVerifyCallback.bind(this)}/>:<div></div>}
                     </div>
                     <button type='submit' disabled={submitting} className='btn btn-lg btn-success btn-block'>Send Me Activation</button>
                 </div>

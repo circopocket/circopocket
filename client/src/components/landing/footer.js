@@ -58,14 +58,11 @@ const data = [{
 },{
   module: 'Products',
   list:[{
-    title: 'Explore',
-    link: '/explore'
+    title: 'Pocket',
+    link: '/pocket'
   },{
-    title: 'Growth',
-    link: '/company/growth'
-  },{
-    title: 'Insight',
-    link: '/company/insight'
+    title: 'Secretary',
+    link: '/secretary'
   }]
 },{
   module: 'Social',
@@ -80,6 +77,6 @@ const data = [{
     outer_link: 'https://github.com/circopocket'
   },{
     title: 'Twitter',
-    outer_link: 'https://twitter.com/revieweer_team'
+    outer_link: 'https://twitter.com/circopocket_team'
   }]
 }]

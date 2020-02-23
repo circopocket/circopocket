@@ -20,10 +20,11 @@ class Signin extends Component {
     render() {
         const {handleSubmit, emailStateError, passwordError, normalError, signinReset} = this.props;
         return (
+            <div className='auth-component'>
             <CenterCard121>
                 <div className='card'>
                     <h4 className='card-header'>
-                        Welcome
+                        Sign In
                     </h4>
                     <div className='card-body'>
                     <form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))} onChange={signinReset}>
@@ -66,6 +67,7 @@ class Signin extends Component {
                     </div>
                 </div>
             </CenterCard121>
+            </div>
         );
     }
 }

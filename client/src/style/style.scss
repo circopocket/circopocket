@@ -8,12 +8,10 @@
 @import 'navbar';
 @import 'override';
 @import 'loader';
-@import 'admin';
-@import 'browser';
 @import 'card';
-@import 'review';
 @import 'moment';
 @import 'user';
+@import 'auth';
 
 * { 
     font-family: 'Open Sans', sans-serif;
