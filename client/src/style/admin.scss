@@ -1,0 +1,181 @@
+.admin-component{
+  .insight-component{
+    overflow: hidden;
+    overflow-x: scroll;
+    user-select: text;
+    .reviews-componant, .products-componant{
+      margin: auto;
+      padding: 10px 0px;
+      min-width: 900px;
+      @media (max-width: 543px) {
+          padding: 10px 15px;
+      }
+      .products-list-info{
+        padding: 10px 0px;
+        opacity: 0.7;
+      }
+      .product-list{
+        padding: 0px;
+      }
+      .product-item{
+        user-select: text;
+        background: white;
+        margin: 3px 0px;
+        padding: 0px;
+        line-height: 40px;
+        &.card{
+          transition: .2s all ease-in-out;
+        }
+        &:hover{
+          box-shadow: 0 0.2rem 2rem rgba(0, 0, 0, .1);
+        }
+        &.list-title{
+          line-height: 30px;
+          height: 30px;
+          padding: 0px;
+          .list-title-item{
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding-left: 12px;
+            letter-spacing: 0.2px;
+            text-transform: capitalize;
+          }
+        }
+        .column.product-avatar.avatar{
+          &.column{
+            background: white;
+          }
+        }
+        .product-detail{
+          .column{
+            &:hover{
+              background: white;
+            }
+
+            .reviewer-list{
+              .reviewer-profile{
+                border-radius: 3px;
+                overflow: hidden;
+                width: 30px;
+                height: 30px;
+                position: relative;
+                img{
+                  position: absolute;
+                  top: 0px;
+                  left: 0px;
+                  width: 30px;
+                  height: 30px;
+                }
+              }
+            }
+          }
+        }
+        .avatar{
+          width: 60px;
+          img{
+            width: 100%;
+          }
+        }
+        .createAt{
+          width: 150px;
+        }
+        .seller{
+          width: 100px;
+        }
+        .viewed{
+          width: 75px;
+        }
+        .visited{
+          width: 75px;
+        }
+        .ordered{
+          width: 120px;
+        }
+        .reviewed{
+          width: 75px;
+        }
+        .finished{
+          width: 100px;
+        }
+        .column{
+          padding: 10px 15px;
+          border: none;
+          outline: none;
+          float: left;
+          &:hover{
+            background: rgba(darken($brand-color, 50%), 0.0175);
+          }
+        }
+
+        .product-reviews .column{
+          padding: 10px 15px 12px;
+        }
+
+        .product-avatar{
+          padding: 10px 15px 0px 10px;
+          .loader-component{
+            padding: 10.5px;
+            opacity: 0.8;
+            .circle-spinner {
+              height: 21px;
+              width: 21px;
+              margin: 0px;
+            }
+          }
+        }
+        .column.product-createAt{
+          padding: 15px 0px 0px 10px;
+          .timeDate,.timeAgo{
+            align-self: center;
+            padding: 0px;
+            font-size: 0.8rem;
+            line-height: 1rem;
+          }
+          .timeAndDate-component{
+            padding: 0px;
+          }
+          .timeAgo{
+            opacity: 0.6;
+          }
+        }
+        .product-seller{
+          white-space: nowrap;
+        }
+
+        &.expanded{
+          transition: .1s all ease-in-out;
+          // .avatar{
+          //   width: 120px;
+          //   transition: .1s all ease-in-out;
+          //   img{
+          //     transition: .1s all ease-in-out;
+          //     height: 100px;
+          //     width: 100px;
+          //   }
+          // }
+          .createAt{
+            width: 150px;
+          }
+          .seller{
+            width: 100px;
+          }
+          .viewed{
+            width: 75px;
+          }
+          .visited{
+            width: 75px;
+          }
+          .ordered{
+            width: 120px;
+          }
+          .reviewed{
+            width: 75px;
+          }
+          .finished{
+            width: 100px;
+          }
+        }
+      }
+    }
+  }
+}
