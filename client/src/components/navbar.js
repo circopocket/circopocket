@@ -22,7 +22,7 @@ class Navbar extends Component {
         return (this.state.pathname.indexOf(router)!=-1)?`${base} circopocket-active`:base;
     }
     renderSignButton(){
-        const {isLoggedIn, profile, isAdmin} = this.props;
+        const {isLoggedIn, profile} = this.props;
         if (isLoggedIn && profile.name){
             return (
                 <span>
@@ -33,8 +33,6 @@ class Navbar extends Component {
                         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                             <NavLink className='dropdown-item' to="/user">Profile</NavLink>
                             <NavLink className='dropdown-item' to="/user/settings">Settings</NavLink>
-                            <NavLink className='dropdown-item' to="/user/reviews">My Reviews</NavLink>
-                            {isAdmin && <NavLink className="dropdown-item" to="/admin/insight">Admin Insight</NavLink>}
                             <div className="dropdown-divider"></div>
                             <NavLink className="dropdown-item" to="/signout">Log Out</NavLink>
                         </div>
