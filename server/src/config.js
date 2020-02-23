@@ -26,9 +26,6 @@ export default {
       secretKey: process.env.S3AWSSecretKey || ''
     }
   },
-  apifyToken: {
-    itemLookUp: process.env.apifyToken_itemLookUp || ''
-  },
   version: process.env.APP_STAGE || 'closed',
   environment: process.env.NODE_ENV || 'development'
 }
