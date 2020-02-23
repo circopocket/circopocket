@@ -8,7 +8,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
     entry: {
         main: path.resolve(__dirname, './src/app.js'),
-        vendor: [
+        'vendor.js': [
             'react', 'react-dom', 'redux', 
             'react-redux', 'react-router-dom', 'redux-form', 
             'axios', 'prop-types'
@@ -71,7 +71,7 @@ module.exports = {
         new webpack.optimize.CommonsChunkPlugin({
             name: 'manifest',
             filename: "manifest.js",
-            chunks: ['vendor'],
+            chunks: ['vendor', 'vendor.js'],
             minChunks: Infinity
         }),
         new ExtractTextPlugin({
