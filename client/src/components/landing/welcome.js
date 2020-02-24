@@ -25,7 +25,7 @@ class Welcome extends React.Component {
         <Link className='btn btn-success btn-block btn-lg try-it-out' to='signup'>Try It Now</Link>
       </div>)
     :(<div>
-        <Link className='btn btn-success btn-block btn-lg' to='connect'>Connect Now</Link>
+        <Link className='btn btn-success btn-block btn-lg' to='pocket'>My Pocket</Link>
       </div>)
   }
 }
