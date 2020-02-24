@@ -46,6 +46,14 @@ const userSchema = new mongoose.Schema({
             default: false
         }
     },
+    plaid: {
+        account: {
+            public_token: String,
+            access_token: String,
+            item_id: String,
+            accounts: Object
+        }
+    },
     avatar: String
 }, {
     timestamps: true

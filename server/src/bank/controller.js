@@ -1,8 +1,8 @@
 import plaid from 'plaid';
+import moment from 'moment';
 import config from '../config';
+import User from '../user/model';
 
-const PLAID_ACCESS_TOKEN = null;
-const PLAID_PUBLIC_TOKEN = null;
 const PLAID_CLIENT_ID = config.plaid.client_id;
 const PLAID_PUBLIC_KEY = config.plaid.public_id;
 const PLAID_SECRET = config.plaid.secret.sandbox;
@@ -16,9 +16,29 @@ const plaidClient = new plaid.Client(
 
 export default {
   creatAccessToken: (req, res, next) => {
-
+    // req.body: {
+    //   public_token: '',
+    //   accounts: []
+    // }
+    const userId = req.user._id;
+    const PUBLIC_TOKEN = req.body.public_token;
+    plaidClient.exchangePublicToken(PUBLIC_TOKEN, (err, tokenResponse) => {
+      if (err) return next('403:Plaid failed to create access token.');
+      const ACCOUNTS = req.body.accounts;
+      const ACCESS_TOKEN = tokenResponse.access_token;
+      const ITEM_ID = tokenResponse.item_id;
+      User.findById(userId).then(user => {
+        user.plaid.account.public_token = PUBLIC_TOKEN;
+        user.plaid.account.access_token = ACCESS_TOKEN;
+        user.plaid.account.item_id = ITEM_ID,
+        user.plaid.account.accounts = ACCOUNTS;
+        return user.save();
+      })
+      .then(savedUser => res.send({ success:  true }))
+      .catch(next);
+    });
   },
   getTransactions: (req, res, next) => {
-
+    const userId = req.user._id;
   }
 }
