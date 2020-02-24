@@ -25,16 +25,23 @@ export default {
     plaidClient.exchangePublicToken(PUBLIC_TOKEN, (err, tokenResponse) => {
       if (err) return next('403:Plaid failed to create access token.');
       const ACCOUNTS = req.body.accounts;
+      const INSTITUTION = req.body.institution;
       const ACCESS_TOKEN = tokenResponse.access_token;
-      const ITEM_ID = tokenResponse.item_id;
+      // const ITEM_ID = tokenResponse.item_id;
       User.findById(userId).then(user => {
-        user.plaid.account.public_token = PUBLIC_TOKEN;
-        user.plaid.account.access_token = ACCESS_TOKEN;
-        user.plaid.account.item_id = ITEM_ID,
-        user.plaid.account.accounts = ACCOUNTS;
+        const account = {
+          public_token: PUBLIC_TOKEN,
+          access_token: ACCESS_TOKEN,
+          institution: INSTITUTION,
+          accounts: ACCOUNTS,
+        }
+        user.plaid.items.push(account)
         return user.save();
       })
-      .then(savedUser => res.send({ success:  true }))
+      .then(savedUser => {
+        console.log('savedUser', savedUser)
+        res.send({ savedUser, success:  true })
+      })
       .catch(next);
     });
   },

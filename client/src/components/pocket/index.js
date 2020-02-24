@@ -1,11 +1,17 @@
 import React from 'react';
 import { CenterCard121 } from '../utils';
 import PlaidLink from 'react-plaid-link'
+import request from '../../redux/request';
 
 const Component =() => {
   const handleOnSuccess = (token, metadata) => {
     // send token to client server
     console.log(token, metadata)
+    request.post('/api/bank/create_access_token', {
+      public_token: token,
+      accounts: metadata.accounts,
+      institution: metadata.institution
+    })
   }
   const handleOnExit = () => {
     // handle the case when your user exits Link

@@ -2,7 +2,7 @@
     <img height='20px' src='https://raw.githubusercontent.com/circopocket/branding/master/logos/logo-long.png'/>
 </div>
 
-# Circopocket [![Build Status](https://travis-ci.com/amazingandyyy/circopocket.svg?token=C7NJ8bT8vb8dmq7fMDsa&branch=master)](https://travis-ci.com/amazingandyyy/circopocket)
+# Circopocket [![Build Status](https://travis-ci.com/circopocket/circopocket.svg?token=C7NJ8bT8vb8dmq7fMDsa&branch=master)](https://travis-ci.com/circopocket/circopocket)
 
 circopocket.com Official Resource for Website and Server
 
@@ -73,7 +73,7 @@ Review, Explore, Earn
   - [x] logo
   - [x] font
   - [x] color
-    - primary green: `#13AB67`
+    - primary green: `#0877d2`
   - [ ] style definition
 - [x] email
   - [x] host by namecheap, served by cloudfare

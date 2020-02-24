@@ -47,12 +47,7 @@ const userSchema = new mongoose.Schema({
         }
     },
     plaid: {
-        account: {
-            public_token: String,
-            access_token: String,
-            item_id: String,
-            accounts: Object
-        }
+        items: []
     },
     avatar: String
 }, {
