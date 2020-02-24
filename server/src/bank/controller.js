@@ -39,6 +39,15 @@ export default {
     });
   },
   getTransactions: (req, res, next) => {
-    const userId = req.user._id;
+    const ACCESS_TOKEN = req.user.plaid.account.access_token;
+    const startDate = moment().subtract(90, 'days').format('YYYY-MM-DD');
+    const endDate = moment().format('YYYY-MM-DD');
+    plaidClient.getTransactions(ACCESS_TOKEN, startDate, endDate, {
+      count: 500,
+      offset: 0,
+    }, (err, transactionsResponse) => {
+      if (err) return next('403:Plaid failed to create access token.');
+      res.send({ transactions: transactionsResponse });
+    });
   }
 }
