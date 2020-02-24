@@ -8,7 +8,8 @@ class Navbar extends Component {
     constructor(){
         super();
         this.state = {
-            pathname: ''
+            pathname: '',
+            toggle: false
         }
     }
     componentWillMount(){
@@ -21,16 +22,19 @@ class Navbar extends Component {
     renderClass(base, router){
         return (this.state.pathname.indexOf(router)!=-1)?`${base} circopocket-active`:base;
     }
+    toggleDropDown() {
+        this.setState({ toggle: !this.state.toggle })
+    }
     renderSignButton(){
         const {isLoggedIn, profile} = this.props;
         if (isLoggedIn && profile.name){
             return (
                 <span>
                     <li className="nav-item dropdown">
-                        <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a className="nav-link dropdown-toggle" onClick={this.toggleDropDown.bind(this)} href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             {profile.name.first}
                         </a>
-                        <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <div className={this.state.toggle?"dropdown-menu show":"dropdown-menu"} onClick={this.toggleDropDown.bind(this)} aria-labelledby="navbarDropdown">
                             <NavLink className='dropdown-item' to="/user">Profile</NavLink>
                             <NavLink className='dropdown-item' to="/user/settings">Settings</NavLink>
                             <div className="dropdown-divider"></div>

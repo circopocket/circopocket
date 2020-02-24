@@ -16,7 +16,6 @@ export function getUserProfile() {
                 dispatch({ type: GET_USER_PROFILE, payload: res.data })
             })
             .catch(error => {
-                // loader.end(300);
                 dispatch({ type: UNAUTH_USER })
             });
     }
@@ -68,8 +67,6 @@ let INITIAL_STATE = {
 export function profileReducer(state=INITIAL_STATE, action) {
     switch (action.type) {
         case GET_USER_PROFILE:
-            window.gtag('set', {'user_id': action.payload._id});
-            window.ga('set', 'userId', action.payload._id);
             return { ...state, ...action.payload }
         case UPDATE_USER_PROFILE_GOOD:
             return { ...state, updateProfileFailMsg: '' }

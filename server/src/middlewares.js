@@ -17,13 +17,7 @@ export function loginRequired(req, res, next){
     .catch(next)
   })
 }
-  export function adminReuired({user}, res, next) {
-    return (config.admin.list.includes(user.email)) ? next() : next('401:Admin Authorization Failed ')
-  }
 
-  export function apifyRequired(req, res, next) {
-    const h = (req.body.data == 'Apify_Authorization');
-    if(!h) return next('403:Need Authorization payload.');
-    if(h !== 'Apify_Authorization')return next('403:Authorization is bad.');
-    next();
-  }
+export function adminReuired({user}, res, next) {
+  return (config.admin.list.includes(user.email)) ? next() : next('401:Admin Authorization Failed ')
+}

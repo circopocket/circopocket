@@ -27,5 +27,13 @@ export default {
     }
   },
   version: process.env.APP_STAGE || 'closed',
-  environment: process.env.NODE_ENV || 'development'
+  environment: process.env.NODE_ENV || 'development',
+  plaid: {
+    client_id: process.env.PLAID_CLIENT_ID || '',
+    public_id: process.env.PLAID_PUBLIC_KEY || '',
+    secret: {
+      development: process.env.PLAID_DEVELOPMENT_SECRET || '',
+      sandbox: process.env.PLAID_SANDBOX_SECRET || ''
+    }
+  }
 }

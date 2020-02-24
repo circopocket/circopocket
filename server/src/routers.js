@@ -1,5 +1,5 @@
 import User from './user/controller';
-import {loginRequired} from './middlewares';
+import { loginRequired } from './middlewares';
 import api from './api';
 
 const router = require('express').Router();

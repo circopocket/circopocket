@@ -8,10 +8,6 @@ import { profileReducer as profile } from './redux/profile';
 import { signinReducer as signin } from './redux/signin';
 import { signupWithEmailReducer as signupWithEmail } from './redux/signupWithEmail';
 import { signupVerificationReducer as signupVerification } from './redux/signupVerification';
-import { adminLaunchReducer as adminLaunch } from './redux/admin/launch';
-import { adminInsightReducer as adminInsight } from './redux/admin/insight';
-import { productReducer as product } from './redux/product';
-import { reviewReducer as review } from './redux/review';
 
 export default combineReducers({
   loadingBar: loadingBarReducer,
@@ -21,9 +17,5 @@ export default combineReducers({
   signin,
   profile,
   signupWithEmail,
-  signupVerification,
-  adminLaunch,
-  adminInsight,
-  product,
-  review
+  signupVerification
 });
