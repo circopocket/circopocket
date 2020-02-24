@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import LoadingBar from 'react-redux-loading-bar';
 import {getUserProfile} from '../actions';
+import PropTypes from 'prop-types';
 
 class Navbar extends Component {
     constructor(){
@@ -85,6 +86,10 @@ function mapStateToProps({auth, profile}){
         profile: profile,
         isAdmin: auth.isAdmin
     }
+}
+
+Navbar.contextTypes = {
+    router: PropTypes.object
 }
 
 export default connect(mapStateToProps, {getUserProfile})(Navbar)

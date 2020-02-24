@@ -20,6 +20,7 @@ export default {
     //   public_token: '',
     //   accounts: []
     // }
+    console.log('create_access_token')
     const userId = req.user._id;
     const PUBLIC_TOKEN = req.body.public_token;
     plaidClient.exchangePublicToken(PUBLIC_TOKEN, (err, tokenResponse) => {
@@ -46,11 +47,13 @@ export default {
     });
   },
   getTransactions: (req, res, next) => {
-    const ACCESS_TOKEN = req.user.plaid.account.access_token;
+    console.log('hi')
+    console.log('req.user.plaid', req.user.plaid)
+    const ACCESS_TOKEN = req.user.plaid.items[0].access_token;
     const startDate = moment().subtract(90, 'days').format('YYYY-MM-DD');
     const endDate = moment().format('YYYY-MM-DD');
     plaidClient.getTransactions(ACCESS_TOKEN, startDate, endDate, {
-      count: 500,
+      count: 50,
       offset: 0,
     }, (err, transactionsResponse) => {
       if (err) return next('403:Plaid failed to create access token.');

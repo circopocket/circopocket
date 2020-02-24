@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { CenterCard121 } from '../utils';
 import PlaidLink from 'react-plaid-link'
 import request from '../../redux/request';
 
 const Component =() => {
+  const [accounts, setAccounts] = useState([]);
+  const [transactions, setTransactions] = useState([]);
+
+  console.log('hi')
+  request.post('/api/bank/get_transactions')
+  .then((res)=>{
+    console.log(res)
+    // setAccounts([...data.accounts])
+    // setTransactions([...data.transactions])
+  }).catch(err=>{
+    console.log(err)
+  })
   const handleOnSuccess = (token, metadata) => {
     // send token to client server
     console.log(token, metadata)
@@ -11,6 +23,10 @@ const Component =() => {
       public_token: token,
       accounts: metadata.accounts,
       institution: metadata.institution
+    }).then(res=>{
+      console.log(res)
+    }).catch(err=>{
+      console.log(err)
     })
   }
   const handleOnExit = () => {
