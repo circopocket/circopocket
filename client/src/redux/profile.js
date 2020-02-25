@@ -1,5 +1,5 @@
 import request from './request';
-import { UNAUTH_USER } from './auth';
+// import { UNAUTH_USER } from './auth';
 import loader from './loader';
 import superagent from 'superagent';
 
@@ -16,7 +16,8 @@ export function getUserProfile() {
                 dispatch({ type: GET_USER_PROFILE, payload: res.data })
             })
             .catch(error => {
-                dispatch({ type: UNAUTH_USER })
+                // dispatch({ type: UNAUTH_USER })
+                console.error(error)
             });
     }
 }

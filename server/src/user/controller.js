@@ -1,5 +1,6 @@
 import AWS from 'aws-sdk';
 
+import bcrypt from 'bcrypt-nodejs';
 import Email from './email';
 import User from './model';
 import config from '../config';
@@ -44,25 +45,29 @@ export default {
       .findOne({ email })
       .then(existingUser => {
         if (existingUser) return next('422:Email is in use');
-        const newUser = new User({
-          name: {
-            first: firstName,
-            last: lastName
-          },
-          email,
-          password,
-          avatar
-        })
-        
-        newUser.save()
-        .then(savedUser => {
-          return res.send({
-            token: JWT.generateToken(savedUser), 
-            isAdmin: (config.admin.list.indexOf(savedUser.email)!=-1),
-            status: true
+        bcrypt.genSalt(10, (error, salt) => {
+          if (error) return next(error);
+          bcrypt.hash(password, salt, null, (err, crypt) => {
+              if (err) return next(err);
+              const newUser = new User({
+                name: {
+                  first: firstName,
+                  last: lastName
+                },
+                email,
+                password: crypt,
+                avatar
+              })
+              return newUser.save()
           })
         })
-        .catch(next);
+      })
+      .then(savedUser => {
+        return res.send({
+          token: JWT.generateToken(savedUser), 
+          isAdmin: (config.admin.list.indexOf(savedUser.email)!=-1),
+          status: true
+        })
       })
       .catch(next);
     })

@@ -54,18 +54,6 @@ const userSchema = new mongoose.Schema({
     timestamps: true
 })
 
-userSchema.pre('save', function (next){
-    const user = this;
-    bcrypt.genSalt(10, (error, salt) => {
-        if (error) return next(error);
-        bcrypt.hash(user.password, salt, null, (err, crypt) => {
-            if (err) return next(err);
-            user.password = crypt;
-            next();
-        })
-    })
-})
-
 // Make use of methods for comparedPassword
 userSchema.methods.comparedPassword = function(p, cb){
     bcrypt.compare(p, this.password, (err, good) => {
